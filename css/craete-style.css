@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding: 10px;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: gray;
+
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.user-details .input-box input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: darkgray;
+
+}
+
+/*  Start botton */
+
+form .button {
+    height: 45px;
+    margin: 30px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    background-color: #6990f2;
+    border-radius: 5px;
+    border: 1px solid #6990f2;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+form .button input:hover {
+    background-color: #063fcf;
+
+
+}
+
+
+/*  End Botton  */
+
+/*  upload img start */
+
+.wrapper {
+    background: white;
+    width: 430px;
+    padding: 30px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.wrapper header {
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper form {
+    border: 2px dashed black;
+    height: 165px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0;
+    background: #eee;
+    cursor: pointer;
+}
+
+form :where(i, p) {
+    color: black;
+}
+
+form i {
+    font-size: 50px;
+}
+
+form p {
+    font-size: 16px;
+    margin-top: 15px;
+
+}
+
+section .row {
+    background: #e9f0ff;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+section .row i {
+    font-size: 30px;
+    color: #6990f2;
+}
+
+
+section .detailses span {
+    font-size: 14px;
+}
+
+.progress-area .row .content {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area .detailses {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.progress-area .progress-bar {
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    width: 0%;
+    background: #6990f2;
+    border-radius: inherit;
+
+}
+
+.uploaded-area {
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.uploaded-area::-webkit-scrollbar {
+    width: 0px;
+}
+
+.uploaded-area .row .detailses {
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.uploaded-area .detailses .size {
+    font-size: 11px;
+}
+
+.uploaded-area .row .content {
+    display: flex;
+    align-items: center;
+}
+
+.uploaeded-area .fa-check {
+    font-size: 16px;
+    color: #6990f2;
+}
+
+/* upload img end */
+
+
+/*  Start Media */
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+
+    }
+
+
+
+}
+
+/* End Media  */
